@@ -30,4 +30,24 @@ $Connection.ConnectionString = ("Server=tcp:$FQServerName,1433;Database=$Databas
 
 $Connection.Open()
 
+$SqlAddTable = @"
+CREATE TABLE [dbo].[$TableName](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[StartDateTime] [datetime] NULL,
+	[EndDateTime] [datetime] NULL,
+	[Description] [nchar](255) NULL,
+ CONSTRAINT [PK_$TableName] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+"@
 
+$Command = New-Object System.Data.SqlClient.SqlCommand
+$Command.Connection = $Connection
+$Command.CommandText = $SqlAddTable
+$Command.ExecuteNonQuery()
+
+$Connection.Close()
+
+#does the table exist?
