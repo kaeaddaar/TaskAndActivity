@@ -14,6 +14,8 @@ $endip = $startip
 # ----- Create a logical server -----
 New-AzureRmSqlServer -ServerName $ServerName -SqlAdministratorCredentials $cred -Location $Location -ResourceGroupName $ResourceGroup
 
-
+New-AzureRmSqlServerFirewallRule -ResourceGroupName $ResourceGroup `
+    -ServerName $ServerName `
+    -FirewallRuleName "AllowSome" -StartIpAddress $startip -EndIpAddress $endip
 
 

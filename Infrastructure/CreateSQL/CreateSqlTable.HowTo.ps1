@@ -26,7 +26,7 @@ $Connection = New-Object System.data.sqlclient.sqlconnection
 $Datatable = New-Object System.Data.DataTable
 
 $Connection.Credential = $credSql
-$Connection.ConnectionString = ("Server=tcp:$FQServerName,1433;Database=DispatchApp;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;")
+$Connection.ConnectionString = ("Server=tcp:$FQServerName,1433;Database=$DatabaseName;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;")
 
 $Connection.Open()
 
