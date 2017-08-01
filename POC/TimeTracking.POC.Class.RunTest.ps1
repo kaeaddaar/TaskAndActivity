@@ -1,5 +1,5 @@
 ﻿#Run Tests for the CreateSqlServer.POC.Class
-."C:\Users\playi\Documents\GitHub\TaskAndActivity\POC\CreateSqlServer.POC.Class.ps1"
+."C:\Users\playi\Documents\GitHub\TaskAndActivity\POC\TimeTracking.POC.Class.ps1"
 
 function test-DoStuff()
 {

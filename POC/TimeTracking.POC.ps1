@@ -36,8 +36,6 @@ $Global:Task.StartTask()
 Start-Sleep -Seconds 10
 $Global:Task.StopTask()
 $Global:task.Save(${function:Save-Sql})
-## declaration not necessary, but good practice
-#$resultsDataTable = New-Object System.Data.DataTable
-#$resultsDataTable = ExecuteSqlNonQuery $Server $Database $UserSqlQuery $credSql
+
 
 
