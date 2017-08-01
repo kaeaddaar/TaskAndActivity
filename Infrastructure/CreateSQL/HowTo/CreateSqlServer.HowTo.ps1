@@ -9,10 +9,10 @@ $ResourceGroup = "Data"
 #Get-AzureRmLocation
 $Location = "canadacentral"
 
-$startip = "108.180.22.21"
+$startip = "162.156.107.203"
 $endip = $startip
 # ----- Create a logical server -----
-New-AzureRmSqlServer -ServerName $ServerName -SqlAdministratorCredentials $cred -Location $Location -ResourceGroupName $ResourceGroup
+New-AzureRmSqlServer -ServerName $ServerName -SqlAdministratorCredentials $cred -Location $Location -ResourceGroupName $ResourceGroup 
 
 New-AzureRmSqlServerFirewallRule -ResourceGroupName $ResourceGroup `
     -ServerName $ServerName `

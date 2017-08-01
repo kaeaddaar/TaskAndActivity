@@ -4,10 +4,10 @@
 
 #Get-AzureRmResourceGroup
 $ResourceGroup = "Data"
-$DatabaseName = "Test1"
+$DatabaseName = "TimeTracking"
 $ServerName = "cmartsqlserver1"
 $FQServerName = "cmartsqlserver1.database.windows.net".ToLower()
-$TableName = "Table1"
+$TableName = "Task"
 [string] $UserSqlQuery= $("SELECT * FROM [dbo].[TableName]")
 
 # ----- Act -----
