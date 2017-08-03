@@ -1,5 +1,5 @@
-﻿."C:\Users\playi\Documents\GitHub\TaskAndActivity\POC\TimeTracking.POC.functions.ps1"
-."C:\Users\playi\Documents\GitHub\TaskAndActivity\POC\TimeTracking.POC.Class.ps1"
+﻿.("" + $PSScriptRoot + "\TimeTracking.POC.functions.ps1")
+.("" + $PSScriptRoot + "\TimeTracking.POC.Class.ps1")
 #Included functions:
 #function ExecuteSqlQuery ($Server, $Database, $SQLQuery) {
 #function get-ProjectList($Server, $Database, $credSql)
@@ -30,6 +30,9 @@ function Save-Sql()
 }
 
 $Global:Task = [Task]::new()
+
+break
+#------ sample usage -----
 $Global:Task.Description = "Test"
 $Global:Task.StartTask()
 
